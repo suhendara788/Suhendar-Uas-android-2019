@@ -42,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
     tombolJSOn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            uraiJSON();
+
+            int a;
+            a = Integer.parseInt(String.valueOf(txtinput.getText()))-1;
+
+            uraiJSON(a);
         }
 
-        private void uraiJSON() {
-            String url ="192.168.5.28/Maha.json";
+        private void uraiJSON(final int a) {
+            String url ="http://192.168.5.28/Maha.json";
 
             JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
                 @Override
@@ -54,14 +58,17 @@ public class MainActivity extends AppCompatActivity {
                     try {
 
 
-                        JSONObject transaksi = response.getJSONObject(0);
+                        JSONObject transaksi = response.getJSONObject(a);
+
                         String id = transaksi.getString("id");
                         String nama = transaksi.getString("nama");
-                        String asal_daerah = transaksi.getString("asal_daerah");
+                        String asal = transaksi.getString("asal_daerah");
                         String kamar = transaksi.getString("kamar");
 
-
-                        tv1.append(id +"\n\n");
+                        tv1.setText(id);
+                        tv2.setText(nama);
+                        tv3.setText(asal);
+                        tv4.setText(kamar);
 
 
 
