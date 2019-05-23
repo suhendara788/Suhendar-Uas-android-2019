@@ -1,0 +1,38 @@
+[
+
+	{
+		"id":"1",
+		"nama":"Muhammad Ujamg",
+		"asal_daerah":"Bogor",
+		"kamar":"Presiden"
+
+	},
+	{
+		"id":"2",
+		"nama":"Ahmad Bambang",
+		"asal_daerah":"Jakarta",
+		"kamar":"Walikota"
+		
+	},
+	{
+		"id":"3",
+		"nama":"Asep Surasep",
+		"asal_daerah":"Bandung",
+		"kamar":"Gubernur"
+	},
+	{
+		"id":"4",
+		"nama":"Budi Susanto",
+		"asal_daerah":"Makasar",
+		"kamar":"Lurah"
+	},
+	{
+		"id":"5",
+		"nama":"Maman abdurahman",
+		"asal_daerah":"Sukabumi",
+		"kamar":"Camat"
+	}
+
+
+
+]
