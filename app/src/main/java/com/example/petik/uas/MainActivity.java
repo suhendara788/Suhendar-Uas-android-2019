@@ -54,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
                     try {
 
 
+                        JSONObject transaksi = response.getJSONObject(0);
+                        String id = transaksi.getString("id");
+                        String nama = transaksi.getString("nama");
+                        String asal_daerah = transaksi.getString("asal_daerah");
+                        String kamar = transaksi.getString("kamar");
 
+
+                        tv1.append(id +"\n\n");
 
 
 
